@@ -14,7 +14,9 @@
         </div>
     </div>
     <div class="container mx-auto">
-        @yield('content')
+        <div class="bg-white shadow-md rounded p-6">
+            @yield('content')
+        </div>
     </div>
 </body>
 </html>

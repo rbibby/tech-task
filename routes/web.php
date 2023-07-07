@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProcessCsvController;
+use App\Http\Controllers\UploadCsvController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', UploadCsvController::class)->name('upload-csv');
+Route::post('process-csv', ProcessCsvController::class)->name('process-csv');

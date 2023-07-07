@@ -14,11 +14,11 @@ class CsvReader
         if (!$contents) {
             throw new UnableToReadFile();
         }
-
-        $contents = rtrim($contents, ",\r\n"); // remove blank lines at end of CSV
+        $contents = str_replace("\r\n", "\n", $contents); // standardise line endings
+        $contents = rtrim($contents, ",\n"); // remove blank lines at end of CSV
 
         $csvReader = new static;
-        $csvReader->lines = explode(",\r\n", $contents);
+        $csvReader->lines = explode(",\n", $contents);
 
         array_shift($csvReader->lines); // remove header row
 

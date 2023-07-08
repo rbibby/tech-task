@@ -7,11 +7,12 @@
 
 ## How to Use
 
-* Clone project to your local machine
+* Clone project to your local machine and open directory in Terminal
 * `composer install`
-* `npm run dev`
+* `npm install`
 * `php artisan serve`
-* Go to the URL specified in the command line and upload your CSV
+* `npm run dev` (in separate Terminal window / tab)
+* Go to the URL specified in the Terminal and upload your CSV
 * The homeowners will be broken down in to individual people and returned as a JSON array
 
 ## Tests
@@ -33,3 +34,6 @@ a CSV with no headers.
 
 The project could be setup with Laravel Pint and GitHub actions to ensure
 consistent code styling is used throughout the project.
+
+GitHub actions could also be used to run the PHPUnit suite automatically
+on each commit and fail if any tests fail.

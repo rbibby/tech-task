@@ -39,9 +39,7 @@ class Homeowners
             ];
         }
 
-        return [
-            (new Person(null, null, null))->toArray(),
-        ];
+        return [];
     }
 
     private static function standardiseCharacters($homeowners)

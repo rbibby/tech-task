@@ -105,6 +105,11 @@ class HomeownersTest extends TestCase
                     ]
                 ]
             ],
+            'no homehowners' => [
+                '',
+                [
+                ]
+            ],
         ];
     }
 }
